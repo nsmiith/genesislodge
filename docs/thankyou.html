@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You | Genesis Lodge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Thank you for contacting Genesis Lodge, a supportive housing home for adult men living with mental health challenges in Brampton, Ontario."
+  />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-branding">
+        <a href="index.html" class="site-logo">Genesis Lodge</a>
+        <p class="site-tagline">Supportive housing in downtown Brampton</p>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero hero--subpage">
+      <div class="container">
+        <h1>Thank You</h1>
+        <p>
+          We’ve received your inquiry. A member of the Genesis Lodge team will review your message and
+          follow up as soon as possible.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="card">
+          <h2>What Happens Next?</h2>
+          <ul>
+            <li>We’ll review the information you provided.</li>
+            <li>We may reach out by phone or email to clarify details.</li>
+            <li>If appropriate, we’ll discuss availability, next steps, and any required assessments.</li>
+          </ul>
+
+          <p>
+            Please remember not to send highly sensitive medical information through the website. We can
+            discuss personal health details directly over the phone or during a scheduled meeting.
+          </p>
+
+          <p>
+            If your situation is urgent or someone is in immediate danger, please contact
+            <strong>911</strong> or your local crisis line instead of waiting for a response from this form.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="contactus.html">Back to Contact Page</a>
+            <a class="btn btn-secondary" href="index.html">Return to Home</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-column">
+        <p>&copy; <span id="year"></span> Genesis Lodge. All rights reserved.</p>
+      </div>
+      <div class="footer-column">
+        <p>
+          Located in downtown Brampton, Ontario &middot;
+          <a href="contactus.html">Contact us</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Keep footer year current
+    (function () {
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
