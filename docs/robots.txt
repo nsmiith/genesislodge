@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://nsmiith.github.io/genesislodge/sitemap.xml
