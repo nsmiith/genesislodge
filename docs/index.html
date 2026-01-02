@@ -1,232 +1,349 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Genesis Lodge | Supportive Housing</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description"
-        content="Genesis Lodge is a supportive housing home for adult men living with mental health challenges in Brampton, Ontario." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <!-- Helper styles for the house image under the location line -->
-  <style>
+<meta charset="utf-8"/>
+<title>Genesis Lodge | Supportive Housing</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Genesis Lodge is a supportive housing home for adult men living with mental health challenges in Brampton, Ontario." name="description"/>
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<!-- Helper styles for the house image under the location line -->
+<style>
     .hero-location-image {
       margin-top: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      gap: 1rem;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 720px;
     }
 
-    .hero-location-image img {
-      display: block;
-      width: 100%;
-      max-width: 340px; /* increased from 260px for a larger, proportional image */
-      height: auto;
+    .hero-location-image .hero-location-card {
+      flex: 1 1 260px;
+      max-width: 340px;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
       border-radius: 4px;
     }
-  </style>
+
+    
+    .hero-location-image .hero-location-card img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.hero-location-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 720px) {
+      .hero-location-image {
+        max-width: 340px;
+        flex-direction: column;
+      }
+    }
+
+    /* Ensure the Life At Genesis Lodge image fits within its grid cell */
+    .image-grid {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-grid .image-card {
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+}
+
+.image-grid .image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.image-grid .image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid .image-card figcaption {
+  margin-top: 0.75rem;
+}
+/* Image + text layout inside "What Residents Can Expect" cards */
+    .card-with-media {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-with-media .card-content {
+      min-width: 0;
+    }
+
+    /* Put the bullet list and image on the same row (image on the right) */
+    .card-with-media .card-body {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .card-with-media .card-body ul.list-bullet {
+      flex: 1;
+      margin: 0;
+    }
+
+    .card-with-media .card-media {
+      flex: 0 0 120px;
+    }
+
+    .card-with-media .card-media img {
+      display: block;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .card-with-media .card-body {
+        flex-direction: column;
+      }
+
+      /* On small screens, show the image above the bullets */
+      .card-with-media .card-media {
+        flex-basis: auto;
+        order: -1;
+      }
+
+      .card-with-media .card-media img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+      }
+    }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark">GL</span>
-        <span class="logo-text">
-          <span class="logo-title">Genesis Lodge</span>
-          <span class="logo-subtitle">Supportive Housing</span>
-        </span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-      <nav class="site-nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact &amp; Admissions</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-image" role="img"
-           aria-label="Exterior of Genesis Lodge, a heritage home in Brampton"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Supportive housing for men living with mental health challenges</h1>
-          <p>
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="index.html">
+<span class="logo-mark">GL</span>
+<span class="logo-text">
+<span class="logo-title">Genesis Lodge</span>
+<span class="logo-subtitle">Supportive Housing</span>
+</span>
+</a>
+<button aria-label="Toggle navigation" class="nav-toggle">
+<span class="nav-toggle-bar"></span>
+<span class="nav-toggle-bar"></span>
+</button>
+<nav aria-label="Main navigation" class="site-nav">
+<ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact &amp; Admissions</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero -->
+<section class="hero">
+<div aria-label="Exterior of Genesis Lodge, a heritage home in Brampton" class="hero-image" role="img"></div>
+<div class="hero-overlay"></div>
+<div class="container hero-content">
+<div class="hero-text">
+<h1>Supportive housing for men living with mental health challenges</h1>
+<p>
             Genesis Lodge is a family-style supportive home for adult men who are fully physically
             functioning and require structure, stability, and support with daily living and psychosocial needs.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:+19054500277">Call for Intake: (905)-450-0277</a>
-            <a class="btn btn-secondary" href="contact.html">Request a Call Back</a>
-          </div>
-          <p class="hero-meta">
+<div class="hero-actions">
+<a class="btn btn-primary" href="tel:+19054500277">Call for Intake: (905)-450-0277</a>
+<a class="btn btn-secondary" href="contact.html">Request a Call Back</a>
+</div>
+<p class="hero-meta">
             Located at 21 Church Street East, Brampton, Ontario
           </p>
-
-          <!-- House image under the location line -->
-          <div class="hero-location-image">
-            <img src="img/house.jpg" alt="Front view of Genesis Lodge home" />
+<!-- House image under the location line -->
+<div class="hero-location-image" aria-label="Genesis Lodge photos">
+            <div class="hero-location-card">
+              <img src="img/house.jpg" alt="Front view of Genesis Lodge home" />
+            </div>
+            <div class="hero-location-card">
+              <img src="img/hero-support.jpg" alt="Residents sharing a supportive conversation in a common area" />
+            </div>
           </div>
-        </div>
-
-        <aside class="hero-card" aria-label="At a glance">
-          <h2>At A Glance</h2>
-          <ul class="list-check">
-            <li>Adult men, 26-55 years</li>
-            <li>Supportive, structured environment</li>
-            <li>Mental-health focused supports</li>
-            <li>Nutritious meals &amp; housekeeping</li>
-            <li>Medication management</li>
-          </ul>
-          <a class="link-inline" href="services.html">Explore Our Services →</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Who we are -->
-    <section class="section">
-      <div class="container section-split">
-        <div>
-          <h2>Who We Are</h2>
-          <p>
+</div>
+<aside aria-label="At a glance" class="hero-card">
+<h2>At A Glance</h2>
+<ul class="list-check">
+<li>Adult men, 26-55 years</li>
+<li>Supportive, structured environment</li>
+<li>Mental-health focused supports</li>
+<li>Nutritious meals &amp; housekeeping</li>
+<li>Medication management</li>
+</ul>
+<a class="link-inline" href="services.html">Explore Our Services →</a>
+</aside>
+</div>
+</section>
+<!-- Who we are -->
+<section class="section">
+<div class="container section-split">
+<div>
+<h2>Who We Are</h2>
+<p>
             Genesis Lodge has provided supportive housing for men living with mental health challenges
             for many years. We offer a safe, structured, and dignified home in a restored heritage
             property in downtown Brampton.
           </p>
-          <p>
+<p>
             Our focus is on helping residents maintain stability, build daily living skills, and stay
             connected to family, community programs, and health-care providers.
           </p>
-        </div>
-        <div class="stat-blocks">
-          <article class="stat-block">
-            <h3>Home Like Environment</h3>
-            <p>
+</div>
+<div class="stat-blocks">
+<article class="stat-block">
+<h3>Home Like Environment</h3>
+<p>
               Shared meals, common spaces, and a family-style atmosphere unlike an institutionalized setting.
             </p>
-          </article>
-          <article class="stat-block">
-            <h3>Collaborative Supports</h3>
-            <p>
+</article>
+<article class="stat-block">
+<h3>Collaborative Supports</h3>
+<p>
               We work alongside physicians, clinics, hospitals, and community programs to support residents.
             </p>
-          </article>
-        </div>
-      </div>
-    </section>
+</article>
+</div>
+</div>
+</section>
+<!-- Key pillars -->
+<section class="section section-alt">
+<div class="container">
+<header class="section-header">
+<h2>What Residents Can Expect</h2>
+<p>A structured and stable environment built around safety, dignity, and community.</p>
+</header>
+<div class="grid-3">
+<article class="card card-with-media">
+<div class="card-content">
+<h3>Support &amp; Health</h3>
+<p>
+                Medication administration, support with daily routines, and coordination with health-care providers.
+              </p><div class="card-body"><ul class="list-bullet">
+<li>Registered Nurse On Staff</li>
+<li>Access to a family physician</li>
+<li>Pharmacy liaison &amp; wellness monitoring</li>
+</ul><div class="card-media">
+<img alt="Support and health: nurse in a clinical setting" loading="lazy" src="img/nurse-pic.jpg"/>
+</div></div>
 
-    <!-- Key pillars -->
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-header">
-          <h2>What Residents Can Expect</h2>
-          <p>A structured and stable environment built around safety, dignity, and community.</p>
-        </header>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Support &amp; Health</h3>
-            <p>
-              Medication administration, support with daily routines, and coordination with health-care providers.
-            </p>
-            <ul class="list-bullet">
-              <li>Registered Nurse On Staff</li>
-              <li>Access to a family physician</li>
-              <li>Pharmacy liaison &amp; wellness monitoring</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Daily Living</h3>
-            <p>
-              Residents receive assistance with laundry, housekeeping, and a consistent meal schedule.
-            </p>
-            <ul class="list-bullet">
-              <li>Nutritious, well-balanced meals</li>
-              <li>Housekeeping services</li>
-              <li>Laundry support</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>Community &amp; Activities</h3>
-            <p>
-              Individualized activity plans and connections to community outreach and rehabilitative programs.
-            </p>
-            <ul class="list-bullet">
-              <li>On-site and community activities</li>
-              <li>Support attending programs and appointments</li>
-              <li>Encouragement of family involvement</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <!-- Life at Genesis Lodge -->
-    <section class="section">
-      <div class="container section-split">
-        <div>
-          <h2>Life At Genesis Lodge</h2>
-          <p>
+</article>
+<article class="card card-with-media">
+<div class="card-content">
+<h3>Daily Living</h3>
+<p>
+                Residents receive assistance with laundry, housekeeping, and a consistent meal schedule.
+              </p><div class="card-body"><ul class="list-bullet">
+<li>Nutritious, well-balanced meals</li>
+<li>Housekeeping services</li>
+<li>Laundry support</li>
+</ul><div class="card-media">
+<img alt="Daily living: preparing meals in a kitchen" loading="lazy" src="img/service-kitchen.png"/>
+</div></div>
+
+</div>
+
+</article>
+<article class="card card-with-media">
+<div class="card-content">
+<h3>Community &amp; Activities</h3>
+<p>
+                Individualized activity plans and connections to community outreach and rehabilitative programs.
+              </p><div class="card-body"><ul class="list-bullet">
+<li>On-site and community activities</li>
+<li>Support attending programs and appointments</li>
+<li>Encouragement of family involvement</li>
+</ul><div class="card-media">
+<img alt="Community and activities: hands holding a small plant" loading="lazy" src="img/hand_plant.jpg"/>
+</div></div>
+
+</div>
+
+</article>
+</div>
+</div>
+</section>
+<!-- Life at Genesis Lodge -->
+<section class="section">
+<div class="container section-split">
+<div>
+<h2>Life At Genesis Lodge</h2>
+<p>
             Each resident has unique strengths, needs, and goals. We work with residents, families, and
             community partners to create routines that support stability and quality of life.
           </p>
-          <ul class="list-bullet">
-            <li>Consistent daily routine and structure</li>
-            <li>Flexible activity program based on interests and abilities</li>
-            <li>Support attending appointments and day programs</li>
-            <li>Opportunities for social connection in a communal environment.</li>
-          </ul>
-        </div>
-        <div class="image-grid">
-          <figure class="image-card">
-            <img src="assets/img/lounge.jpg" alt="Shared lounge area at Genesis Lodge" />
-            <figcaption>Bright common areas for shared time and activities.</figcaption>
-          </figure>
-          <figure class="image-card">
-            <img src="assets/img/room.jpg" alt="Resident bedroom at Genesis Lodge" />
-            <figcaption>Furnished semi-private and private rooms, as available.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="section section-cta">
-      <div class="container section-cta-inner">
-        <div>
-          <h2>Looking for supportive housing for yourself or a family member?</h2>
-          <p>
+<ul class="list-bullet">
+<li>Predictable daily routines and supportive structure</li>
+<li>Personalized activities based on interests and abilities</li>
+<li>Help coordinating appointments and day programs</li>
+<li>Opportunities for social connection and community participation</li>
+</ul>
+</div>
+<div class="image-grid">
+<figure class="image-card">
+<div class="image-frame">
+<img alt="Residents enjoying a guided group activity in a comfortable common area" src="img/life-at-genesis.jpg"/>
+</div>
+<figcaption>A warm, communal setting that supports routine, connection, and daily living.</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="section section-cta">
+<div class="container section-cta-inner">
+<div>
+<h2>Looking for supportive housing for yourself or a family member?</h2>
+<p>
             Talk with us about your situation. We can explain our admissions process, services, and
             typical funding sources, and help you determine whether Genesis Lodge is a good fit.
           </p>
-        </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="tel:+19054500277">Call-(905)-450-0277</a>
-          <a class="btn btn-outline" href="contact.html">Contact &amp; Admissions</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-    <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <p class="footer-title">Genesis Lodge</p>
-        <p>21 Church Street East<br />Brampton, Ontario, L6V 1E9</p>
-      </div>
-      <div class="footer-contact">
-        <p><strong>Phone:</strong> <a href="tel:+19054500277">(905)-450-0277</a></p>
-        <p><strong>Fax:</strong> (905)-450-6764</p>
-      </div>
-      <p class="footer-meta">© <span id="year"></span> Genesis Lodge. All rights reserved. <a href="privacy-terms.html">Privacy &amp; Terms</a></p>
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
+</div>
+<div class="cta-actions">
+<a class="btn btn-primary" href="tel:+19054500277">Call-(905)-450-0277</a>
+<a class="btn btn-outline" href="contact.html">Contact &amp; Admissions</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>
+<p class="footer-title">Genesis Lodge</p>
+<p>21 Church Street East<br/>Brampton, Ontario, L6V 1E9</p>
+</div>
+<div class="footer-contact">
+<p><strong>Phone:</strong> <a href="tel:+19054500277">(905)-450-0277</a></p>
+<p><strong>Fax:</strong> (905)-450-6764</p>
+</div>
+<p class="footer-meta">© <span id="year"></span> Genesis Lodge. All rights reserved. <a href="privacy-terms.html">Privacy &amp; Terms</a></p>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
