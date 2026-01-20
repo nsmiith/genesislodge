@@ -29,7 +29,7 @@
       border-radius: 4px;
     }
 
-    
+
     .hero-location-image .hero-location-card img {
       display: block;
       width: 100%;
@@ -60,6 +60,22 @@
   width: 100%;
   max-width: 520px;
   margin: 0;
+}
+
+/* ↓ Smaller, “about 5 bullet lines” size for the Life At Genesis Lodge image */
+.image-grid .image-card.image-card--life {
+  max-width: 360px;      /* tweak: 340–400 */
+}
+
+/* ↓ On wider screens, drop the image down so it starts inline with the first paragraph */
+@media (min-width: 721px) {
+  .image-grid .image-card.image-card--life {
+    margin-top: 2.25rem; /* tweak: 1.5–3rem */
+  }
+}
+
+.image-grid .image-card.image-card--life .image-frame {
+  aspect-ratio: 16 / 9;  /* shorter than 4/3 so it feels less oversized */
 }
 
 .image-grid .image-frame {
@@ -305,7 +321,7 @@
 </ul>
 </div>
 <div class="image-grid">
-<figure class="image-card">
+<figure class="image-card image-card--life">
 <div class="image-frame">
 <img alt="Residents enjoying a guided group activity in a comfortable common area" src="img/life-at-genesis.jpg"/>
 </div>
